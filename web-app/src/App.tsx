@@ -1,12 +1,11 @@
-import './App.css'
-import Map from './components/map/Map'
+import YandexMap from './components/YandexMap';
 
 function App() {
   return (
     <div className="App">
-      <Map />
+      <YandexMap />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
