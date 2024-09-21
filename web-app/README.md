@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# Yandex Map with Custom Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project integrates Yandex Maps into a React application using Vite for development. It includes custom functionality for searching and displaying locations within Uzbekistan. The application leverages Tailwind CSS for styling and includes custom hooks to manage Yandex Maps interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Architecture
 
-## Expanding the ESLint configuration
+### Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **`src/`**: Contains all source code files.
 
-- Configure the top-level `parserOptions` property like this:
+  - **`components/`**: Contains React components.
+    - `MapControls.tsx`: Provides the UI for the search input and suggestions list.
+  - **`hooks/`**: Contains custom React hooks.
+    - `useYandexMap.ts`: Contains logic for initializing the Yandex map, handling search, and fetching suggestions.
+  - **`styles/`**: Contains global CSS files.
+    - `index.css`: Includes Tailwind CSS directives.
+  - **`App.tsx`**: The main React component that renders the application.
+  - **`main.tsx`**: The entry point of the application, which integrates React with the DOM.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **`public/`**: Contains static files such as `index.html`.
+
+- **`tailwind.config.js`**: Configuration file for Tailwind CSS.
+
+## Setup
+
+### 1. Install Dependencies
+
+To get started, install the necessary dependencies for the project:
+
+```bash
+npm ci
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. In a root directory, create .env file
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+add this api-keys:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+#### VITE_YANDEX_API_KEY=your_yandex_api_key
+
+#### VITE_YANDEX_SUGGEST_KEY=your_yandex_suggest_api_key
