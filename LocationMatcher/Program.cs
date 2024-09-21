@@ -199,6 +199,41 @@ out body;";
 
     static async Task Main(string[] args)
     {
+        string json1 = File.ReadAllText("./enriched_json_data3.json");
+        List<AllInData> datas1 = JsonConvert.DeserializeObject<List<AllInData>>(json1);
+
+        foreach (var data in datas1)
+        {
+            if (data.PlacesAround == null)
+            {
+                continue;
+            }
+            foreach (var dataInData in data.PlacesAround)
+            {
+                if (string.IsNullOrEmpty(dataInData.Type))
+                {
+                    if (!string.IsNullOrEmpty(dataInData.Name))
+                    {
+                        if (dataInData.Name.ToLower().Contains("metro") || dataInData.Name.ToLower().Contains("метро"))
+                        {
+                            dataInData.Type = "railway_station";
+                        } else
+                        {
+                            dataInData.Type = "hospital";
+                        }
+                    }
+                }
+            }
+
+            data.PlacesAround = data.PlacesAround.Where(x => !string.IsNullOrEmpty(x.Name) || !string.IsNullOrEmpty(x.Type)).ToList();
+        }
+
+        datas1 = datas1.Where(x => x.BasicData != null).ToList();
+
+        string toBeWritten = JsonConvert.SerializeObject(datas1, Newtonsoft.Json.Formatting.Indented);
+        File.WriteAllText("./enriched_json_data4.json", toBeWritten);
+
+        /*
         string json1 = File.ReadAllText("./enriched_json_data2.json");
         List<AllInData> datas1 = JsonConvert.DeserializeObject<List<AllInData>>(json1);
 
@@ -216,6 +251,7 @@ out body;";
 
         string toBeWritten = JsonConvert.SerializeObject(datas1, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText("./enriched_json_data3.json", toBeWritten);
+        */
 
         /*
         string json2 = File.ReadAllText("./normalized_json_data.json");

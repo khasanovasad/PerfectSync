@@ -1,0 +1,6 @@
+@REScore.API_HostAddress = http://localhost:5059
+
+GET {{REScore.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

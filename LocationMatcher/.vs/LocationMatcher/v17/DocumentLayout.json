@@ -13,7 +13,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 161,
+          "DockedWidth": 200,
           "SelectedChildIndex": 7,
           "Children": [
             {
@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Git\\PerfectSync\\LocationMatcher\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAMwMkAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-21T10:36:45.102Z",
               "EditorCaption": ""

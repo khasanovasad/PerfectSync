@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "REScore.API.Controllers.MainController",
+    "Method": "Get",
+    "RelativePath": "Main/Get1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "WallType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Class",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Level",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "REScore.API.Controllers.MainController",
+    "Method": "Get",
+    "RelativePath": "Main/Get2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "REScore.API.Controllers.MainController",
+    "Method": "GetAQI",
+    "RelativePath": "Main/GetAQI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
