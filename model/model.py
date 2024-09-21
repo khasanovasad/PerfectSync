@@ -18,7 +18,7 @@ def main():
         # Get all arguments (starting from index 1, as sys.argv[0] is the script name)
         fileName = sys.argv[1]
 
-        with open(fileName, 'r') as file:
+        with open(fileName, 'r', encoding='utf8') as file:
             # Step 2: Load and parse the JSON data
             example = json.load(file)
 

@@ -39,8 +39,8 @@ const ExtraFormInputs: React.FC<{
     ) {
       e.preventDefault();
       fetchAiDate({
-        longitude: coordinates[0].toString(),
-        latitude: coordinates[1].toString(),
+        longitude: coordinates[1].toString(),
+        latitude: coordinates[0].toString(),
         level: state.level,
         price: state.price,
         rooms: state.rooms,
