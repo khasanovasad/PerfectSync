@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useYandexMap from '../hooks/useYandexMap';
 import { MarkerData } from '../types';
 import Card from './Card';
+import ExtraFormInputs from './ExtraInputForms';
 import Header from './Header';
 import SearchWithSuggestions from './SearchWithSuggestions';
 
@@ -48,6 +49,7 @@ const YandexMap: React.FC = () => {
             setSuggestions={selectSuggestion}
             className="w-1/2"
           />
+          <ExtraFormInputs />
           <Card title="school" distance="500m" percentage="30%" />
         </div>
 
