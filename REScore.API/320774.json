@@ -6,102 +6,98 @@
     "Rooms": "3",
     "Price": "3 825 000 000",
     "Capacity": "114.01 m²",
-    "DistanceFromTheAmirTemurSquare": "1689.199001586041",
-    "DomTutRating": "0/5",
-    "Class": "Comfort",
-    "City": "Tashkent",
-    "Walls": "...",
-    "Province": "..."
+    "DistanceFromTheSquare": "1689.199001586041",
+    "DomTutRating": null
   },
   "PlacesAround": [
     {
       "Type": "school",
       "Name": "International House Tashkent Lyceum  ",
-      "Distance": "378.1502042747397",
+      "DistanceFrom": "378.1502042747397",
       "Latitude": "41.3236089",
       "Longitude": "69.2926778"
     },
     {
       "Type": "school",
       "Name": "Xitoy tili kurslari",
-      "Distance": "330.34838673203626",
+      "DistanceFrom": "330.34838673203626",
       "Latitude": "41.3179549",
       "Longitude": "69.2964094"
     },
     {
       "Type": "school",
       "Name": "Focus school школа искусств",
-      "Distance": "897.1130183278958",
+      "DistanceFrom": "897.1130183278958",
       "Latitude": "41.3253376",
       "Longitude": "69.2863241"
     },
     {
       "Type": "school",
       "Name": "",
-      "Distance": "581.3598878427773",
+      "DistanceFrom": "581.3598878427773",
       "Latitude": "41.316631",
       "Longitude": "69.2909356"
     },
     {
       "Type": "school",
       "Name": "Учебный центр Корейского языка",
-      "Distance": "103.39824049734239",
+      "DistanceFrom": "103.39824049734239",
       "Latitude": "41.319845",
       "Longitude": "69.2951883"
     },
     {
       "Type": "school",
       "Name": "Dance Club",
-      "Distance": "264.8687452141626",
+      "DistanceFrom": "264.8687452141626",
       "Latitude": "41.3197746",
       "Longitude": "69.298048"
     },
     {
       "Type": "school",
       "Name": "Учебный центр Кэмбридж",
-      "Distance": "400.6254040878747",
+      "DistanceFrom": "400.6254040878747",
       "Latitude": "41.3203602",
       "Longitude": "69.2999334"
     },
     {
       "Type": "school",
       "Name": "International Talent Academy",
-      "Distance": "859.734107401575",
+      "DistanceFrom": "859.734107401575",
       "Latitude": "41.3130954",
       "Longitude": "69.2940451"
     },
     {
       "Type": "park",
       "Name": "парк Славянских Скульптур",
-      "Distance": "680.2389388069697",
+      "DistanceFrom": "680.2389388069697",
       "Latitude": "41.3205546",
       "Longitude": "69.3033053"
     },
     {
       "Type": "",
       "Name": "Hamid Olimjon metro bekati",
-      "Distance": "294.30528055252665",
+      "DistanceFrom": "294.30528055252665",
       "Latitude": "41.3181644",
       "Longitude": "69.2957419"
     },
     {
       "Type": "",
       "Name": "Dr. Summit",
-      "Distance": "880.7936320099984",
+      "DistanceFrom": "880.7936320099984",
       "Latitude": "41.3172937",
       "Longitude": "69.2857078"
     },
     {
       "Type": "",
       "Name": "Центр медицинской реабилитации \"Прогноз\"",
-      "Distance": "355.8014406129799",
+      "DistanceFrom": "355.8014406129799",
       "Latitude": "41.3224317",
       "Longitude": "69.291532"
     },
     {
       "Type": "",
       "Name": "Республиканская кардиологический центр",
-      "Distance": "568.1348353089517",
+      "DistanceFrom": "568.1348353089517",
       "Latitude": "41.3241039",
       "Longitude": "69.3003243"
     }

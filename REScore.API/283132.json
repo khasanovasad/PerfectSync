@@ -1,0 +1,17 @@
+{
+  "BasicData": {
+    "Latitude": "69.283132",
+    "Longitude": "41.312587",
+    "Level": "4",
+    "Rooms": "3",
+    "Price": "1233211",
+    "Capacity": "123",
+    "DistanceFromTheAmirTemurSquare": "3511691.286063166",
+    "DomTutRating": "0/5",
+    "Class": "Comfort",
+    "City": "Tashkent",
+    "Walls": "...",
+    "Province": "..."
+  },
+  "PlacesAround": []
+}

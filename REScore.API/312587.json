@@ -1,0 +1,74 @@
+{
+  "BasicData": {
+    "Latitude": "41.312587",
+    "Longitude": "69.283132",
+    "Level": "4",
+    "Rooms": "3",
+    "Price": "1233211",
+    "Capacity": "123",
+    "DistanceFromTheAmirTemurSquare": "338.4687468767192",
+    "DomTutRating": "0/5",
+    "Class": "Comfort",
+    "City": "Tashkent",
+    "Walls": "...",
+    "Province": "..."
+  },
+  "PlacesAround": [
+    {
+      "Type": "school",
+      "Name": "Galaxy укув маркази",
+      "Distance": "514.3621779113997",
+      "Latitude": "41.3079669",
+      "Longitude": "69.2832979"
+    },
+    {
+      "Type": "school",
+      "Name": "",
+      "Distance": "792.4992221724099",
+      "Latitude": "41.316631",
+      "Longitude": "69.2909356"
+    },
+    {
+      "Type": "school",
+      "Name": "Sensus",
+      "Distance": "527.4287913669193",
+      "Latitude": "41.3078552",
+      "Longitude": "69.2834842"
+    },
+    {
+      "Type": "school",
+      "Name": "International Talent Academy",
+      "Distance": "914.005297728327",
+      "Latitude": "41.3130954",
+      "Longitude": "69.2940451"
+    },
+    {
+      "Type": "",
+      "Name": "",
+      "Distance": "854.1571713364846",
+      "Latitude": "41.3201924",
+      "Longitude": "69.281759"
+    },
+    {
+      "Type": "",
+      "Name": "",
+      "Distance": "14.988694495161454",
+      "Latitude": "41.3126738",
+      "Longitude": "69.2832691"
+    },
+    {
+      "Type": "",
+      "Name": "Юнyc Раджабий метро",
+      "Distance": "148.05845056553306",
+      "Latitude": "41.3138871",
+      "Longitude": "69.2835077"
+    },
+    {
+      "Type": "",
+      "Name": "Dr. Summit",
+      "Distance": "566.3378837290066",
+      "Latitude": "41.3172937",
+      "Longitude": "69.2857078"
+    }
+  ]
+}
