@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { MarkerData } from '../types';
 import { UZBEKISTAN_BOUNDS } from '../utils/constants';
 import { loadYandexMaps } from '../utils/loadYandexMap';
+import { useAISuggestions } from './useAISuggestions';
 
 const useYandexMap = (
   markersData: MarkerData[],
@@ -13,6 +14,8 @@ const useYandexMap = (
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<any>(null);
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [coordinates, setCoordinates] = useState<[number, number] | null>(null);
+  const { results, fetchAiDate } = useAISuggestions();
 
   useEffect(() => {
     const initMap = () => {
@@ -37,6 +40,16 @@ const useYandexMap = (
       }
     };
   }, [markersData, apiKey]);
+
+  useEffect(() => {
+    if (coordinates === null) {
+      return;
+    }
+    fetchAiDate({
+      latitude: coordinates[0].toString(),
+      longitude: coordinates[1].toString(),
+    });
+  }, [coordinates]);
 
   const addMarkers = (markers: MarkerData[]) => {
     markers.forEach((marker) => {
@@ -68,6 +81,7 @@ const useYandexMap = (
         const geoObject = res.geoObjects.get(0);
         if (geoObject) {
           const coordinates = geoObject.geometry.getCoordinates();
+          setCoordinates(coordinates);
           const address = geoObject.getAddressLine();
           mapInstance.current.setCenter(coordinates, 12, {
             duration: 500,
@@ -141,6 +155,7 @@ const useYandexMap = (
     fetchSuggestions: debouncedFetchSuggestions,
     suggestions,
     selectSuggestion,
+    coordinates,
   };
 };
 
