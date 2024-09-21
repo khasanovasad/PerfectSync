@@ -1,5 +1,6 @@
 import requests
 from geopy.distance import geodesic
+import csv
 
 # Set your coordinates and radius (in meters)
 latitude = 41.308890
@@ -40,3 +41,25 @@ places = sorted(places, key=lambda x: x['distance'])
 # Display the results
 for place in places:
     print(f"{place['type'].capitalize()}: {place['name']} is {place['distance']:.2f} meters away.")
+
+
+csv_filename = 'nearby_places.csv'
+# Write data to CSV
+with open(csv_filename, mode='w', newline='', encoding='utf-8') as csv_file:
+    fieldnames = ['Type', 'Name', 'Latitude', 'Longitude', 'Distance (meters)']
+    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+
+    # Write header
+    writer.writeheader()
+
+    # Write data
+    for place in places:
+        writer.writerow({
+            'Type': place['type'].capitalize(),
+            'Name': place['name'],
+            'Latitude': place['lat'],
+            'Longitude': place['lon'],
+            'Distance (meters)': f"{place['distance']:.2f}"
+        })
+
+print(f"Data exported to {csv_filename}")
