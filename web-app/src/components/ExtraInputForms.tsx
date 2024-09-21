@@ -50,80 +50,82 @@ const ExtraFormInputs: React.FC<{
   };
 
   return (
-    <form
-      onSubmit={submitAIDate}
-      className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md space-y-4"
-    >
-      <div>
-        <label
-          htmlFor="price"
-          className="block text-sm font-medium text-gray-700"
-        >
-          Price
-        </label>
-        <input
-          type="text"
-          id="price"
-          value={state.price}
-          onChange={(e) => setPrice(e.target.value)}
-          className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-        />
-      </div>
+    <>
+      <h3 className="my-4 mt-5 font-bold text-xl">
+        Specify your current findings:
+      </h3>
+      <form onSubmit={submitAIDate} className="'w-full p-2 rounded-l-md z-10">
+        <div className="mb-3">
+          <label
+            htmlFor="price"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Price
+          </label>
+          <input
+            type="text"
+            id="price"
+            value={state.price}
+            onChange={(e) => setPrice(e.target.value)}
+            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          />
+        </div>
 
-      <div>
-        <label
-          htmlFor="capacity"
-          className="block text-sm font-medium text-gray-700"
-        >
-          Area
-        </label>
-        <input
-          type="text"
-          id="capacity"
-          value={state.area}
-          onChange={(e) => setCapacity(e.target.value)}
-          className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-        />
-      </div>
+        <div className="mb-3">
+          <label
+            htmlFor="capacity"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Area
+          </label>
+          <input
+            type="text"
+            id="capacity"
+            value={state.area}
+            onChange={(e) => setCapacity(e.target.value)}
+            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          />
+        </div>
 
-      <div>
-        <label
-          htmlFor="rooms"
-          className="block text-sm font-medium text-gray-700"
-        >
-          Rooms
-        </label>
-        <input
-          type="text"
-          id="rooms"
-          value={state.rooms}
-          onChange={(e) => setRooms(e.target.value)}
-          className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-        />
-      </div>
+        <div className="mb-3">
+          <label
+            htmlFor="rooms"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Rooms
+          </label>
+          <input
+            type="text"
+            id="rooms"
+            value={state.rooms}
+            onChange={(e) => setRooms(e.target.value)}
+            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          />
+        </div>
 
-      <div>
-        <label
-          htmlFor="level"
-          className="block text-sm font-medium text-gray-700"
+        <div className="mb-3">
+          <label
+            htmlFor="level"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Level
+          </label>
+          <input
+            type="text"
+            id="level"
+            value={state.level}
+            onChange={(e) => setLevel(e.target.value)}
+            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white py-2 rounded-md mt-3"
         >
-          Level
-        </label>
-        <input
-          type="text"
-          id="level"
-          value={state.level}
-          onChange={(e) => setLevel(e.target.value)}
-          className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-        />
-      </div>
-      <button
-        type="submit"
-        className="w-full bg-blue-500 text-white py-2 rounded-md"
-      >
-        Submit
-      </button>
-    </form>
+          Submit
+        </button>
+      </form>
+    </>
   );
 };
 

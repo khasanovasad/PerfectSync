@@ -58,45 +58,88 @@ const useYandexMap = (markersData: MarkerData[]) => {
   const handleSearch = (searchQuery: string) => {
     if (!window.ymaps || !searchQuery) return;
 
-    window.ymaps
-      .geocode(searchQuery, {
-        boundedBy: UZBEKISTAN_BOUNDS,
-        strictBounds: true,
-        results: 1,
-      })
-      .then((res: any) => {
-        const geoObject = res.geoObjects.get(0);
-        if (geoObject) {
-          const coordinates = geoObject.geometry.getCoordinates();
-          setCoordinates(coordinates);
-          const address = geoObject.getAddressLine();
-          mapInstance.current.setCenter(coordinates, 12, {
-            duration: 500,
-          });
+    if (searchQuery === 'Amir') {
+      window.ymaps
+        .geocode(searchQuery, {
+          boundedBy: UZBEKISTAN_BOUNDS,
+          strictBounds: true,
+          results: 1,
+        })
+        .then((res: any) => {
+          const geoObject = res.geoObjects.get(0);
+          if (geoObject) {
+            const coordinates = [41.320774, 69.295172] as any;
+            setCoordinates(coordinates);
+            const address = geoObject.getAddressLine();
+            mapInstance.current.setCenter(coordinates, 12, {
+              duration: 500,
+            });
 
-          const placemark = new window.ymaps.Placemark(
-            coordinates,
-            {
-              hintContent: address || 'Location',
-              balloonContent: `You searched for: ${searchQuery}`,
-            },
-            {
-              preset: 'islands#icon',
-              iconColor: '#FF0000',
-            }
-          );
+            const placemark = new window.ymaps.Placemark(
+              coordinates,
+              {
+                hintContent: address || 'Location',
+                balloonContent: `You searched for: ${searchQuery}`,
+              },
+              {
+                preset: 'islands#icon',
+                iconColor: '#FF0000',
+              }
+            );
 
-          mapInstance.current.geoObjects.removeAll();
-          addMarkers(markersData);
-          mapInstance.current.geoObjects.add(placemark);
-        } else {
-          alert('Address not found within Uzbekistan!');
-        }
-      })
-      .catch((error: any) => {
-        console.error('Geocoding error:', error);
-        alert('Error finding location!');
-      });
+            mapInstance.current.geoObjects.removeAll();
+            addMarkers(markersData);
+            mapInstance.current.geoObjects.add(placemark);
+          } else {
+            alert('Address not found within Uzbekistan!');
+          }
+        })
+        .catch((error: any) => {
+          console.error('Geocoding error:', error);
+          alert('Error finding location!');
+        });
+    } else {
+      window.ymaps
+        .geocode(searchQuery, {
+          boundedBy: UZBEKISTAN_BOUNDS,
+          strictBounds: true,
+          results: 1,
+        })
+        .then((res: any) => {
+          const geoObject = res.geoObjects.get(0);
+          if (geoObject) {
+            const coordinates = geoObject.geometry.getCoordinates();
+            console.log(coordinates, 'coordinates from false');
+            setCoordinates(coordinates);
+            const address = geoObject.getAddressLine();
+            mapInstance.current.setCenter(coordinates, 12, {
+              duration: 500,
+            });
+
+            const placemark = new window.ymaps.Placemark(
+              coordinates,
+              {
+                hintContent: address || 'Location',
+                balloonContent: `You searched for: ${searchQuery}`,
+              },
+              {
+                preset: 'islands#icon',
+                iconColor: '#FF0000',
+              }
+            );
+
+            mapInstance.current.geoObjects.removeAll();
+            addMarkers(markersData);
+            mapInstance.current.geoObjects.add(placemark);
+          } else {
+            alert('Address not found within Uzbekistan!');
+          }
+        })
+        .catch((error: any) => {
+          console.error('Geocoding error:', error);
+          alert('Error finding location!');
+        });
+    }
   };
 
   // Throttled and debounced fetchSuggestions function

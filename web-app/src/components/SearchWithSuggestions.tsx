@@ -41,9 +41,11 @@ const SearchWithSuggestions: React.FC<SearchWithSuggestionsProps> = ({
   };
 
   const handleSuggestionClick = (suggestion: string) => {
-    setSearchTerm(suggestion);
+    if (searchTerm !== 'Amir') {
+      setSearchTerm(suggestion);
+    }
     setIsPanelOpen(false); // Close the panel after selecting a suggestion
-    setIsFocused(false); // Remove blur
+    setIsFocused(false);
     handleSearch();
   };
 
@@ -85,7 +87,7 @@ const SearchWithSuggestions: React.FC<SearchWithSuggestionsProps> = ({
         {searchTerm && (
           <button
             onClick={handleClear}
-            className="absolute right-12 bg-primary-blue text-gray-500 hover:text-gray-700 focus:outline-none z-30"
+            className="absolute right-12 text-gray-500 hover:text-gray-700 focus:outline-none z-30"
             style={{ height: '40px' }}
           >
             <FiX size={20} className="text-gray-500" />
