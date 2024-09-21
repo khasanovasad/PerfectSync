@@ -18,17 +18,14 @@ const Hero: React.FC = () => (
           </p>
         </div>
         <div className="mt-12 text-lg font-semibold leading-loose text-white whitespace-nowrap max-md:mt-10">
-          <Button
-            label="Demo"
-            icon="https://cdn.builder.io/api/v1/image/assets/TEMP/9af12529ac6b9c533561018960f89fdbcf1b860b467a31153bb074ac9d05073b?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607"
-          />
+          <Button label="Demo" icon="/play-circle.svg" />
         </div>
       </div>
     </div>
     <div className="flex flex-col px-8 mt-16 max-w-full w-[1280px] max-md:px-5 max-md:mt-10">
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/40df09e484bf00c1e66aa59dd0287ff113642aa82319a0fb3d02a107b49ceac2?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607"
+        src="/app-screen.png"
         alt="Analytics Dashboard Preview"
         className="object-contain w-full aspect-[2.53] max-md:max-w-full"
       />
