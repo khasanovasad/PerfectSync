@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { MarkerData } from '../types';
 import { UZBEKISTAN_BOUNDS } from '../utils/constants';
 import { loadYandexMaps } from '../utils/loadYandexMap';
-import { useAISuggestions } from './useAISuggestions';
 
 const useYandexMap = (
   markersData: MarkerData[],
@@ -15,7 +14,6 @@ const useYandexMap = (
   const mapInstance = useRef<any>(null);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [coordinates, setCoordinates] = useState<[number, number] | null>(null);
-  const { results, fetchAiDate } = useAISuggestions();
 
   useEffect(() => {
     const initMap = () => {
@@ -45,10 +43,6 @@ const useYandexMap = (
     if (coordinates === null) {
       return;
     }
-    fetchAiDate({
-      latitude: coordinates[0].toString(),
-      longitude: coordinates[1].toString(),
-    });
   }, [coordinates]);
 
   const addMarkers = (markers: MarkerData[]) => {
