@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useAISuggestions } from '../hooks/useAISuggestions';
 import { useFormReducer } from '../hooks/useFormReducer'; // Assuming the hook is in this path
-import useYandexMap from '../hooks/useYandexMap';
 import { MarkerData } from '../types';
 
-const ExtraFormInputs: React.FC = () => {
+const ExtraFormInputs: React.FC<{ coordinates: [number, number] | null }> = ({
+  coordinates,
+}) => {
   const { state, setPrice, setCapacity, setRooms, setLevel } = useFormReducer();
-
-  const apiKey = import.meta.env.VITE_YANDEX_API_KEY || '';
-  const suggestKey = import.meta.env.VITE_YANDEX_SUGGEST_KEY || '';
 
   const [markersData, setMarkersData] = useState<MarkerData[]>([
     {
@@ -23,13 +21,12 @@ const ExtraFormInputs: React.FC = () => {
     },
   ]);
   const { results, fetchAiDate } = useAISuggestions();
-  const { coordinates } = useYandexMap(markersData, apiKey, suggestKey);
 
   useEffect(() => {
     console.log(results);
   }, [results]);
 
-  const submitAIDate = () => {
+  const submitAIDate = (e: any) => {
     if (
       coordinates !== null &&
       state.area &&
@@ -37,6 +34,7 @@ const ExtraFormInputs: React.FC = () => {
       state.price &&
       state.rooms
     ) {
+      e.preventDefault();
       fetchAiDate({
         longitude: coordinates[0].toString(),
         latitude: coordinates[1].toString(),
@@ -49,7 +47,10 @@ const ExtraFormInputs: React.FC = () => {
   };
 
   return (
-    <form className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md space-y-4">
+    <form
+      onSubmit={submitAIDate}
+      className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md space-y-4"
+    >
       <div>
         <label
           htmlFor="price"
