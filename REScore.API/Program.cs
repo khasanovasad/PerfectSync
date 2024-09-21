@@ -16,6 +16,17 @@ public class Program
 
         builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAllOrigins",
+                policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+        });
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -31,6 +42,8 @@ public class Program
 
 
         app.MapControllers();
+
+        app.UseCors("AllowAllOrigins");
 
         app.Run();
     }

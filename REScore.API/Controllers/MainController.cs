@@ -18,12 +18,11 @@ public class MainController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("Get1")]
-    public ActionResult Get([FromQuery] RequestDto request)
+    [HttpPost("Get1")]
+    public async Task<ActionResult> Get([FromBody] RequestDto request)
     {
-        _logger.LogInformation(JsonConvert.SerializeObject(request));
-
-        return Ok(new ResponseDto());
+        var result = await _mediator.Send(new GetScoringInfo{ Latitude = request.Latitude, Longitude = request.Longitude, Capacity = request.Area, Level = request.Level, Price = request.Price, Rooms = request.Rooms });
+        return Ok(result);
     }
 
     [HttpGet("Get2")]

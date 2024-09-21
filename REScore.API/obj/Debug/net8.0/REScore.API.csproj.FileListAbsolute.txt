@@ -35,3 +35,5 @@ C:\Git\PerfectSync\REScore.API\obj\Debug\net8.0\ref\REScore.API.dll
 C:\Git\PerfectSync\REScore.API\bin\Debug\net8.0\MediatR.dll
 C:\Git\PerfectSync\REScore.API\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Git\PerfectSync\REScore.API\bin\Debug\net8.0\GeoCoordinate.NetCore.dll
+C:\Git\PerfectSync\REScore.API\bin\Debug\net8.0\320774.json
+C:\Git\PerfectSync\REScore.API\bin\Debug\net8.0\System.Web.Cors.dll

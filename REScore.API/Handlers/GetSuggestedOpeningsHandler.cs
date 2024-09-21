@@ -11,15 +11,16 @@ namespace REScore.API.Handlers
         public string SearchParameter {  get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public string Separator { get; set; }
     }
 
     public class PlaceInfo
     {
         public string Type { get; set; }
         public string Name { get; set; }
-        public double DistanceFrom { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
+        public string Distance { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
     
     }
 
@@ -35,9 +36,9 @@ namespace REScore.API.Handlers
 
             string query = @$"[out:json];
 (
-node[""{searchParameterName}""=""{searchParameter}""](around:{radius},{latitude},{longitude});
-way[""{searchParameterName}""=""{searchParameter}""](around:{radius},{latitude},{longitude});
-relation[""{searchParameterName}""=""{searchParameter}""](around:{radius},{latitude},{longitude}););
+node[""{searchParameterName}""{request.Separator}""{searchParameter}""](around:{radius},{latitude},{longitude});
+way[""{searchParameterName}""{request.Separator}""{searchParameter}""](around:{radius},{latitude},{longitude});
+relation[""{searchParameterName}""{request.Separator}""{searchParameter}""](around:{radius},{latitude},{longitude}););
 out body;";
 
             string apiUrl = "http://overpass-api.de/api/interpreter";
@@ -109,8 +110,8 @@ out body;";
                             var sCoord = new GeoCoordinate(Convert.ToDouble(latitude), Convert.ToDouble(longitude));
                             var eCoord = new GeoCoordinate(Convert.ToDouble(lat), Convert.ToDouble(lon));
                             distance = sCoord.GetDistanceTo(eCoord).ToString();
+                            placesAround.Add(new PlaceInfo { Latitude = lat, Longitude = lon, Name = name, Type = type, Distance = distance });
                         }
-                        placesAround.Add(new PlaceInfo { Latitude = Convert.ToDouble(lat), Longitude = Convert.ToDouble(lon), Name = name, Type = type, DistanceFrom = Convert.ToDouble(distance) });
                     }
                     return placesAround.ToArray();
 

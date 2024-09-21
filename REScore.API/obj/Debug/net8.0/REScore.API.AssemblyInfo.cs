@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("REScore.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c35ec5b3724e1a142c890090154cdc0aad3bc4f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6330ff608b28cb80ae2c8f85d104c0c49669cf2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("REScore.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("REScore.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

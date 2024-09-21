@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Git\\PerfectSync\\REScore.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|c:\\git\\perfectsync\\rescore.api\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|solutionrelative:controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|c:\\git\\perfectsync\\rescore.api\\handlers\\getsuggestedopeningshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|solutionrelative:handlers\\getsuggestedopeningshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|c:\\git\\perfectsync\\rescore.api\\handlers\\getscoringinfohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|solutionrelative:handlers\\getscoringinfohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|c:\\git\\perfectsync\\rescore.api\\handlers\\getsuggestedopeningshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|solutionrelative:handlers\\getsuggestedopeningshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|c:\\git\\perfectsync\\rescore.api\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|solutionrelative:controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{985DB82B-B623-483A-B133-2A7030893830}|REScore.API.csproj|c:\\git\\perfectsync\\rescore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "Handlers\\GetScoringInfoHandler.cs",
               "ToolTip": "C:\\Git\\PerfectSync\\REScore.API\\Handlers\\GetScoringInfoHandler.cs",
               "RelativeToolTip": "Handlers\\GetScoringInfoHandler.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAawDUAAABtAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwD8AAADwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-21T21:04:40.08Z",
               "EditorCaption": ""
@@ -96,13 +96,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GetSuggestedOpeningsHandler.cs",
               "DocumentMoniker": "C:\\Git\\PerfectSync\\REScore.API\\Handlers\\GetSuggestedOpeningsHandler.cs",
               "RelativeDocumentMoniker": "Handlers\\GetSuggestedOpeningsHandler.cs",
               "ToolTip": "C:\\Git\\PerfectSync\\REScore.API\\Handlers\\GetSuggestedOpeningsHandler.cs",
               "RelativeToolTip": "Handlers\\GetSuggestedOpeningsHandler.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA8wCQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-21T18:13:11.665Z",
               "EditorCaption": ""
@@ -122,13 +122,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainController.cs",
               "DocumentMoniker": "C:\\Git\\PerfectSync\\REScore.API\\Controllers\\MainController.cs",
               "RelativeDocumentMoniker": "Controllers\\MainController.cs",
               "ToolTip": "C:\\Git\\PerfectSync\\REScore.API\\Controllers\\MainController.cs",
               "RelativeToolTip": "Controllers\\MainController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBgAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-21T17:13:01.64Z",
               "EditorCaption": ""

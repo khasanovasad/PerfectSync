@@ -25,15 +25,13 @@ export const useAISuggestions = () => {
     price,
     rooms,
   }: AIParams) => {
-    const data = await axios.get<string>(`http://localhost:5059/Main/Get1`, {
-      data: {
-        latitude,
-        longitude,
-        area,
-        level,
-        price,
-        rooms,
-      },
+    const data = await axios.post<string>(`http://localhost:5059/Main/Get1`, {
+        Latitude: latitude,
+        Longitude: longitude,
+        Area: area,
+        Level: level,
+        Price: price,
+        Rooms: rooms,
     });
     if (data) {
       setResults(data.data);
