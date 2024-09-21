@@ -20,6 +20,7 @@ const YandexMap: React.FC = () => {
       balloonContent: 'Second marker',
     },
   ]);
+  const [price, setPrice] = useState<string | null>(null);
 
   const {
     mapContainer,
@@ -47,8 +48,11 @@ const YandexMap: React.FC = () => {
             setSuggestions={selectSuggestion}
             className="w-1/2"
           />
-          <ExtraFormInputs coordinates={coordinates} />
-          <Card title="school" distance="500m" percentage="30%" />
+          <ExtraFormInputs
+            updatePrice={(price: string) => setPrice(price)}
+            coordinates={coordinates}
+          />
+          <Card price={price} />
         </div>
 
         <div ref={mapContainer} style={{ width: '50%', height: '500px' }} />
