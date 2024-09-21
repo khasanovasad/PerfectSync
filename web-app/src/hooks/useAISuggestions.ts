@@ -35,7 +35,6 @@ export const useAISuggestions = () => {
         rooms,
       },
     });
-    console.log(data);
     if (data) {
       setResults(data.data);
     }

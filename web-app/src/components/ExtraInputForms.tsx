@@ -3,9 +3,10 @@ import { useAISuggestions } from '../hooks/useAISuggestions';
 import { useFormReducer } from '../hooks/useFormReducer'; // Assuming the hook is in this path
 import { MarkerData } from '../types';
 
-const ExtraFormInputs: React.FC<{ coordinates: [number, number] | null }> = ({
-  coordinates,
-}) => {
+const ExtraFormInputs: React.FC<{
+  coordinates: [number, number] | null;
+  updatePrice: (price: string) => void;
+}> = ({ coordinates, updatePrice }) => {
   const { state, setPrice, setCapacity, setRooms, setLevel } = useFormReducer();
 
   const [markersData, setMarkersData] = useState<MarkerData[]>([
@@ -23,8 +24,10 @@ const ExtraFormInputs: React.FC<{ coordinates: [number, number] | null }> = ({
   const { results, fetchAiDate } = useAISuggestions();
 
   useEffect(() => {
-    console.log(results);
-  }, [results]);
+    if (results) {
+      updatePrice(results);
+    }
+  });
 
   const submitAIDate = (e: any) => {
     if (
