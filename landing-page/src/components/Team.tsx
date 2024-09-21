@@ -3,23 +3,20 @@ import TeamMember from './TeamMember';
 
 const teamData = [
   {
-    image:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/d4a9c04db8e0d7f3a3fee8ce53891c58726bf63558c7b15aa1877f38f719a838?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607',
+    image: '/Image.jpg',
     name: 'Asadbek KHASANOV',
     role: 'Full Stack Developer',
     description:
       'Former co-founder of Opendoor. Early staff at Spotify and Clearbit.',
   },
   {
-    image:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/6bea86a4567843d46925ba6f4db28ffa7b3cde740c816f9a49ed83c29cda0ca4?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607',
+    image: '/Image-1.jpg',
     name: 'Olimjon TURSUNKULOV',
     role: 'Product Designer',
     description: 'Lead engineering teams at Figma, Pitch, and Protocol Labs.',
   },
   {
-    image:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/867e99d2b0b775ea0ecddefa41df2fe8aa018524b4b30be77a6c023aea13f87d?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607',
+    image: '/Image-2.jpg',
     name: 'Bekhzod IRGASHEV',
     role: 'Full Stack Developer',
     description: 'Former frontend dev for Linear, Coinbase, and Postscript.',

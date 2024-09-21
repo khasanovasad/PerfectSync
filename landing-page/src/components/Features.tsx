@@ -3,25 +3,25 @@ import Feature from './Feature';
 
 const featuresData = [
   {
-    icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/72e3a98481edab3a95344a517196a7f47a8a61b9171533982f8400cead41af3b?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607',
+    icon: '/message-chat-circle.svg',
     title: 'Share team inboxes',
     description:
       'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.',
   },
   {
-    icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8b81d0b0c406843745ff270492f8b2976bc14bd1d41eef34af9f98ce51d99372?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607',
+    icon: '/zap.svg',
     title: 'Share team inboxes',
     description:
       'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.',
   },
   {
-    icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7a21e57929c5f9d5e712d82f44ed4abea3f31849dcea5c45fd5dea4c31c272ab?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607',
+    icon: '/chart-breakout-square.svg',
     title: 'Share team inboxes',
     description:
       'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.',
   },
   {
-    icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/d55037febe682f863c46f099f5351cd647ae01f4ddd284298ba17bfa1e9406c6?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607',
+    icon: '/message-smile-circle.svg',
     title: 'Share team inboxes',
     description:
       'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.',

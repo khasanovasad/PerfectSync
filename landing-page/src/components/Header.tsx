@@ -23,10 +23,7 @@ const Header: React.FC = () => {
                 ))}
               </nav>
             </div>
-            <Button
-              label="Demo"
-              icon="https://cdn.builder.io/api/v1/image/assets/TEMP/bd17eba67dd5bfab6d57203d7525bbb39b71e40b081c21621f08f48514cca564?placeholderIfAbsent=true&apiKey=0e345544e3834ebaa05d7eb39071f607"
-            />
+            <Button label="Demo" icon="/play-circle.svg" />
           </div>
         </div>
       </div>
