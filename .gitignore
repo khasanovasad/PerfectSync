@@ -9,3 +9,7 @@
 
 # Ignore .idea folder in any directory
 **/.idea
+
+# Ignore build artifacts
+/dist/
+/build/
