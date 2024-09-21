@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import useYandexMap from '../hooks/useYandexMap';
 import { MarkerData } from '../types';
-import MapControls from './MapControls';
+import Card from './Card';
+import Header from './Header';
+import SearchWithSuggestions from './SearchWithSuggestions';
 
 const YandexMap: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -34,17 +36,24 @@ const YandexMap: React.FC = () => {
   }, [searchQuery]);
 
   return (
-    <div>
-      <h1>Yandex Map with Custom Search (Restricted to Uzbekistan)</h1>
-      <MapControls
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        onSearch={() => handleSearch(searchQuery)}
-        suggestions={suggestions}
-        selectSuggestion={selectSuggestion}
-      />
-      <div ref={mapContainer} style={{ width: '100%', height: '500px' }} />
-    </div>
+    <>
+      <Header />
+      <main className="flex gap-10 px-8">
+        <div className="flex flex-col w-1/2 justify-items-start">
+          <SearchWithSuggestions
+            searchTerm={searchQuery}
+            setSearchTerm={setSearchQuery}
+            suggestions={suggestions}
+            handleSearch={() => handleSearch(searchQuery)}
+            setSuggestions={selectSuggestion}
+            className="w-1/2"
+          />
+          <Card title="school" distance="500m" percentage="30%" />
+        </div>
+
+        <div ref={mapContainer} style={{ width: '50%', height: '500px' }} />
+      </main>
+    </>
   );
 };
 

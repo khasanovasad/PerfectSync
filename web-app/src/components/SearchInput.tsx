@@ -1,28 +1,35 @@
-import React, { MouseEventHandler } from 'react';
-
+import clx from 'classnames';
+import React, { ChangeEventHandler } from 'react';
 interface SearchInputProps {
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
-  onSearch: MouseEventHandler<HTMLButtonElement>;
+  searchTerm: string;
+  handleChange: ChangeEventHandler<HTMLInputElement>;
+  handleFocus: () => void;
+  handleBlur: () => void;
+  placeholder: string;
+  className?: string;
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
-  searchQuery,
-  setSearchQuery,
-  onSearch,
+  className,
+  handleChange,
+  handleFocus,
+  handleBlur,
+  placeholder,
+  searchTerm,
 }) => (
-  <div style={{ marginBottom: '10px' }}>
-    <input
-      type="text"
-      value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)}
-      placeholder="Enter address..."
-      style={{ padding: '10px', width: '300px', marginRight: '10px' }}
-    />
-    <button onClick={onSearch} style={{ padding: '10px' }}>
-      Search
-    </button>
-  </div>
+  <input
+    type="text"
+    value={searchTerm}
+    onChange={handleChange}
+    onFocus={handleFocus}
+    onBlur={handleBlur}
+    placeholder={placeholder}
+    className={clx(
+      'w-full p-2 pr-10 border border-gray-300 rounded-l-md z-10',
+      className
+    )} // Rounded only on the left side
+    style={{ height: '40px' }} // Same height as the search button
+  />
 );
 
 export default SearchInput;

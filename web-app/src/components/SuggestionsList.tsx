@@ -1,33 +1,28 @@
 const SuggestionList = ({
   suggestions,
   selectSuggestion,
+  className,
 }: {
   suggestions: any[];
   selectSuggestion: (suggestion: string) => void;
+  className: string;
 }) => {
   return (
-    suggestions.length > 0 && (
-      <ul
-        style={{
-          border: '1px solid #ccc',
-          padding: 0,
-          margin: 0,
-          listStyle: 'none',
-          maxHeight: '150px',
-          overflowY: 'auto',
-        }}
-      >
-        {suggestions.map((suggestion, index) => (
-          <li
+    <div className={className}>
+      {suggestions.length > 0 ? (
+        suggestions.map((suggestion, index) => (
+          <div
             key={index}
-            onClick={() => selectSuggestion(suggestion)}
-            style={{ padding: '10px', cursor: 'pointer' }}
+            className="p-2 hover:bg-gray-200 cursor-pointer"
+            onMouseDown={() => selectSuggestion(suggestion)}
           >
             {suggestion}
-          </li>
-        ))}
-      </ul>
-    )
+          </div>
+        ))
+      ) : (
+        <div className="p-2 text-gray-500">No suggestions found</div>
+      )}
+    </div>
   );
 };
 

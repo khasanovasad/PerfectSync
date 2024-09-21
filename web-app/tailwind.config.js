@@ -5,7 +5,11 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}', // Add this line for Vite projects
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary-blue': '#0056A1',
+      },
+    },
   },
   plugins: [],
 };
