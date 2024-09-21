@@ -1,7 +1,6 @@
 import { default as classNames, default as clx } from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { FiSearch, FiX } from 'react-icons/fi';
-import { useAISuggestions } from '../hooks/useAISuggestions';
 import SearchInput from './SearchInput';
 import SuggestionList from './SuggestionsList';
 
@@ -20,12 +19,10 @@ const SearchWithSuggestions: React.FC<SearchWithSuggestionsProps> = ({
   setSearchTerm,
   suggestions,
   handleSearch,
-  coordinates,
   className,
 }) => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
-  const { fetchAiDate } = useAISuggestions();
 
   useEffect(() => {
     if (searchTerm && suggestions) {

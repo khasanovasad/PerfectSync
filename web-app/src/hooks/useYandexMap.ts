@@ -5,15 +5,14 @@ import { MarkerData } from '../types';
 import { UZBEKISTAN_BOUNDS } from '../utils/constants';
 import { loadYandexMaps } from '../utils/loadYandexMap';
 
-const useYandexMap = (
-  markersData: MarkerData[],
-  apiKey: string,
-  suggestKey: string
-) => {
+const useYandexMap = (markersData: MarkerData[]) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<any>(null);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [coordinates, setCoordinates] = useState<[number, number] | null>(null);
+
+  const apiKey = import.meta.env.VITE_YANDEX_API_KEY || '';
+  const suggestKey = import.meta.env.VITE_YANDEX_SUGGEST_KEY || '';
 
   useEffect(() => {
     const initMap = () => {
@@ -37,13 +36,7 @@ const useYandexMap = (
         mapInstance.current = null;
       }
     };
-  }, [markersData, apiKey]);
-
-  useEffect(() => {
-    if (coordinates === null) {
-      return;
-    }
-  }, [coordinates]);
+  }, [markersData, apiKey, suggestKey]);
 
   const addMarkers = (markers: MarkerData[]) => {
     markers.forEach((marker) => {

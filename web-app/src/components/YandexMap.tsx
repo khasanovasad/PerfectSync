@@ -21,16 +21,14 @@ const YandexMap: React.FC = () => {
     },
   ]);
 
-  const apiKey = import.meta.env.VITE_YANDEX_API_KEY || '';
-  const suggestKey = import.meta.env.VITE_YANDEX_SUGGEST_KEY || '';
-
   const {
     mapContainer,
     handleSearch,
     fetchSuggestions,
     suggestions,
     selectSuggestion,
-  } = useYandexMap(markersData, apiKey, suggestKey);
+    coordinates,
+  } = useYandexMap(markersData);
 
   useEffect(() => {
     fetchSuggestions(searchQuery);
@@ -49,7 +47,7 @@ const YandexMap: React.FC = () => {
             setSuggestions={selectSuggestion}
             className="w-1/2"
           />
-          <ExtraFormInputs />
+          <ExtraFormInputs coordinates={coordinates} />
           <Card title="school" distance="500m" percentage="30%" />
         </div>
 
