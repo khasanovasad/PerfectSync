@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'primary-blue': '#0056A1',
+        'light-blue': '#155EEF',
       },
     },
   },

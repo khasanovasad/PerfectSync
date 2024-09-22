@@ -8,13 +8,12 @@ const Hero: React.FC = () => (
         <div className="flex flex-col max-w-full text-center w-[1024px]">
           <h1 className="flex flex-col w-full text-6xl font-semibold tracking-tighter leading-tight text-gray-900 max-md:max-w-full max-md:text-4xl">
             <span className="opacity-[var(--sds-size-stroke-border)] max-md:max-w-full max-md:text-4xl">
-              Beautiful analytics to grow smarter
+              Unlock the Future of Real Estate with Our Predictive Scoring App
             </span>
           </h1>
           <p className="self-center mt-6 text-xl leading-8 opacity-[var(--sds-size-stroke-border)] text-slate-600 w-[768px] max-md:max-w-full">
-            Powerful, self-serve product and growth analytics to help you
-            convert, engage, and retain more users. Trusted by over 4,000
-            startups.
+            Navigating the real estate market is challenging—whether you’re an
+            investor, a marketer, a real estate agency, or a bank.
           </p>
         </div>
         <div className="mt-12 text-lg font-semibold leading-loose text-white whitespace-nowrap max-md:mt-10">

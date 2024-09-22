@@ -5,6 +5,7 @@ interface TeamMemberProps {
   name: string;
   role: string;
   description: string;
+  company: string;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -12,6 +13,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   name,
   role,
   description,
+  company,
 }) => (
   <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px]">
     <img
@@ -31,6 +33,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       </div>
       <p className="mt-4 text-base leading-6 opacity-[var(--sds-size-stroke-border)] text-slate-600">
         {description}
+        <br />
+        <span className="font-bold">{company}</span>
       </p>
     </div>
   </div>

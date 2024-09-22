@@ -6,20 +6,22 @@ const teamData = [
     image: '/Image.jpg',
     name: 'Asadbek KHASANOV',
     role: 'Full Stack Developer',
-    description:
-      'Former co-founder of Opendoor. Early staff at Spotify and Clearbit.',
+    description: '4+ years of experience in Software Engineering ',
+    company: '@TRUSS (ex EPAM)',
   },
   {
     image: '/Image-1.jpg',
     name: 'Olimjon TURSUNKULOV',
     role: 'Product Designer',
-    description: 'Lead engineering teams at Figma, Pitch, and Protocol Labs.',
+    description: '3+ years of experience in Product&UX/UI Design',
+    company: '@UZUM',
   },
   {
     image: '/Image-2.jpg',
     name: 'Bekhzod IRGASHEV',
     role: 'Full Stack Developer',
-    description: 'Former frontend dev for Linear, Coinbase, and Postscript.',
+    description: '5+ years of experience in Software Engineering',
+    company: '@EPAM',
   },
 ];
 

@@ -12,7 +12,7 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
       loading="lazy"
       src={icon}
       alt=""
-      className="object-contain w-12 aspect-square opacity-[var(--sds-size-stroke-border)] bg-primary-blue rounded-md"
+      className="object-contain w-10 p-2 aspect-square opacity-[var(--sds-size-stroke-border)] bg-light-blue rounded-md"
     />
     <div className="flex flex-col mt-16 w-full max-md:mt-10">
       <div className="flex flex-col w-full">
