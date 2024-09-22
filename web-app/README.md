@@ -1,4 +1,4 @@
-# Yandex Map with Custom Search
+# VistaPoint web-app
 
 ## Overview
 
@@ -31,6 +31,7 @@ To get started, install the necessary dependencies for the project:
 
 ```bash
 npm ci
+npm run dev
 ```
 
 ### 2. In a root directory, create .env file
